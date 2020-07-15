@@ -14,8 +14,6 @@ import { AuthInterceptorInterceptor } from './auth-interceptor.interceptor';
 import { ResultsHeaderComponent } from './results-header/results-header.component';
 import { ResultsSideBarComponent } from './results-side-bar/results-side-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 
@@ -41,7 +39,7 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorInterceptor, multi: true}, { provide: NZ_I18N, useValue: en_US } ],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorInterceptor, multi: true} ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
