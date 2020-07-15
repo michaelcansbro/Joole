@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div>
+    <div>      
+        <img src="assets/logo.png">
+        <h4 >Building Product Selection Platform</h4>
+       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <input type='text' placeholder="First Name" formControlName="fName" required/>
+        <div *ngIf="!fName.valid && (fName.dirty || fName.touched)">Invalid first name</div>
+            <input type='text' placeholder="Last Name" formControlName="lName" required/>
+        <div *ngIf="!lName.valid && (lName.dirty || lName.touched)">Invalid last name</div>
+            <input type='text' placeholder=" Email" formControlName="email" required/>
+        <div *ngIf="!email.valid && (email.dirty || email.touched)">Invalid Email</div>
+            <input type='text' placeholder="Password" formControlName="password" required/>
+        <div *ngIf="!password.valid && (password.dirty || password.touched)">Invalid Password</div>
+
+            <button class="btn btn-primary" type="submit" [disabled]="!registerForm.valid">
+                Register
+            </button>
+        
+       </form>
+    </div>
+    </div>

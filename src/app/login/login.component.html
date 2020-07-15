@@ -1,0 +1,19 @@
+<hr> 
+<app-header></app-header>
+<div>
+    <div>      
+        <img src="assets/logo.png">
+        <h4 >Building Product Selection Platform</h4>
+       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <input type='text' placeholder=" Email" formControlName="email" required/>
+        <div *ngIf="!email.valid && (email.dirty || email.touched)">Invalid Email</div>
+            <input type='text' placeholder="Password" formControlName="password" required/>
+        <div *ngIf="!password.valid && (password.dirty || password.touched)">Invalid Password</div>
+
+            <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">
+                Login
+            </button>
+        
+       </form>
+    </div>
+    </div>

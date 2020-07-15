@@ -1,0 +1,12 @@
+.right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 10px;
+    justify-content: space-between;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+      
+      
+  }
